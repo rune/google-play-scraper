@@ -39,7 +39,7 @@ function memoized (opts) {
     suggest: require('./lib/suggest'),
     developer: require('./lib/developer'),
     reviews: require('./lib/reviews'),
-    similar: require('./lib/similar'),
+    similar: R.partial(require('./lib/similar'), [mParseList, mAppMethod]),
     permissions: require('./lib/permissions'),
     categories: require('./lib/categories')
   };
