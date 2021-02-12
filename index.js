@@ -15,7 +15,7 @@ const methods = {
   suggest: require('./lib/suggest'),
   developer: require('./lib/developer'),
   reviews: require('./lib/reviews'),
-  similar: require('./lib/similar'),
+  similar: R.partial(require('./lib/similar'), [parseList, appMethod]),
   permissions: require('./lib/permissions'),
   categories: require('./lib/categories')
 };
